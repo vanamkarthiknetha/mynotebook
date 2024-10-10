@@ -32,7 +32,6 @@ const Signup = (props) => {
 
     const json = await response.json();
     if (json.success) {
-      console.log(json.authToken);
       // Storing token in local storge
       localStorage.setItem("token", json.authToken);
       //redirecting to home
@@ -43,6 +42,8 @@ const Signup = (props) => {
       showAlert("Invalid Credentials !","danger")
 
     }
+    console.log(json)
+
   };
   return (
     <div className=" mt-3">

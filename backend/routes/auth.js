@@ -21,6 +21,7 @@ router.post(
     const result = validationResult(req);
     if (!result.isEmpty()) {
       res.send({ errors: result.array() });
+      return;
     }
     try {
       let success=false;
@@ -71,6 +72,7 @@ router.post(
     const result = validationResult(req);
     if (!result.isEmpty()) {
       res.send({ errors: result.array() });
+      return;
     }
     try {
       let success=false;
