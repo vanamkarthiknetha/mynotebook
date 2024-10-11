@@ -20,7 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "both": "concurrently \"npm run start\" \"nodemon backend/index.js\"",
-    "buildfebe": "concurrently \"npm run build\" \"npm run bebuild\""
+    "buildfebe": "npm run build && npm run bebuild"
   },
   "eslintConfig": {
     "extends": [
