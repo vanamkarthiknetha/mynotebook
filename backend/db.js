@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
-const mongoUri = "mongodb://localhost:27017/mynotebook";
+// require('dotenv').config()                           //use while running only backend folder
+require('dotenv').config({ path: './backend/.env' });  // use while running concurrenly
+const mongoUri = process.env.DB_URI;
 
 const connectToMongo = () => {
   mongoose.connect(
